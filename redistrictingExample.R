@@ -3,7 +3,7 @@ library(redist)
 library(sf)
 
 
- setwd("/scratch/network/gnovoa/Workshop Folder/")
+ setwd("/scratch/network/gnovoa/Workshop_Folder/")
 
 city_blocks<-st_read('chicago.shp')
 city_blocks<-city_blocks%>%dplyr::select(pop, GEOID, NAME, geometry)

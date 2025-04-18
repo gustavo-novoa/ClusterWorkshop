@@ -18,7 +18,7 @@ city_map<- redist::redist_map(city_blocks, pop_tol=pop_tol, ndists=ndists, total
 city_map$adj<-redist.adjacency(city_map)
 
 
-#rb_plans<-redist_smc(city_map, nsims=50000, ncores=64, runs=4, pop_temper=.01)
+#rb_plans<-redist_smc(city_map, nsims=50000, ncores=arallel::detectCores(), runs=4, pop_temper=.01)
 
 rb_plans<-redist_smc(city_map, nsims=10, ncores=parallel::detectCores(), runs=4, pop_temper=.01)
 

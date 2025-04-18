@@ -24,5 +24,4 @@ rb_plans<-redist_smc(city_map, nsims=10, ncores=parallel::detectCores(), runs=4,
 
 
 print("sim complete")
-setwd("/scratch/network/gnovoa/Workshop Folder")
 saveRDS(rb_plans, file=paste0('chicago_sims.rds'))

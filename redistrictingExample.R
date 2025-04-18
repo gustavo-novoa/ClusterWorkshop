@@ -10,7 +10,7 @@ agg_files <-   list.files(path = aggregated_path, pattern = ".shp", full.names =
 block_files<-  list.files(path = block_path, pattern = ".shp", full.names = FALSE)
 
 
-  city_blocks<-st_read('chicago_blocks.shp')
+  city_blocks<-st_read('chicago.shp')
   city_blocks<-city_blocks%>%dplyr::select(pop, GEOID, NAME, geometry)
   
   agg_dists<-st_read('chicago_districts_summary_2010_L2.shp')
